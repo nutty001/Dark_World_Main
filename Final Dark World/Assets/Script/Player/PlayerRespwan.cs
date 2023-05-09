@@ -14,7 +14,7 @@ public class PlayerRespwan : MonoBehaviour
     [SerializeField] private float startinghealth;
     public float currentHealth {get; private set; }
     private Animator anim;
-//    [SerializeField] private AudioSource PlayerDeath;
+    [SerializeField] private AudioSource PlayerDeath;
        void Awake()
     {
         respawnPoint = transform.position;   
@@ -42,9 +42,9 @@ public class PlayerRespwan : MonoBehaviour
     public void playerDefeated()
     {
         GetComponent<PlayerMovement>().enabled = false;
-      //  anim.SetTrigger("hurt");
-      //  anim.SetTrigger("die");
-      //  PlayerDeath.Play();
+        anim.SetTrigger("hurt");
+        anim.SetTrigger("die");
+        PlayerDeath.Play();
         StartCoroutine(WaitForSceneLoad());
         respawning = false;
     }

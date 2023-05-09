@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9038434813007241078}
   - component: {fileID: 7917802524721490161}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: OtherCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5324595068891656832}
   - component: {fileID: 8464503027535831271}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 9053052129908956610}
   - component: {fileID: 4342708087336990229}
   - component: {fileID: -2595006226390175535}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FallingPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,7 +250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2387835420721241798}
   - component: {fileID: 3781230380162286547}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -308,7 +308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9068236560667508965}
   - component: {fileID: 9068236560667508964}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dark 4 Mossy - Decorations&Hazards_21
   m_TagString: Untagged
   m_Icon: {fileID: 0}

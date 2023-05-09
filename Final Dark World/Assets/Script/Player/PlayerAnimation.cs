@@ -36,18 +36,21 @@ public class PlayerAnimation : MonoBehaviour
         {
             state = MovementState.running;
             sprite.flipX = false;
+            Debug.Log("running ");
         }
         else if(dirX < 0f)
         {
             state = MovementState.running;
             sprite.flipX = true;
+            Debug.Log("running");
         }
         else
         {
             state = MovementState.idle;
+            Debug.Log("idle");
         }
 
-        if(rb.velocity.y > 1f)
+        if(rb.velocity.y > 0.1f)
         {  
             Debug.Log(rb.velocity.y);
             state = MovementState.jumping;

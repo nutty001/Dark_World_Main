@@ -5,15 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject Canvas;
-
-    void Awake()
-    {
-         Canvas.SetActive(true);
-    }
     public void PlayGame()
     {
-       Canvas.SetActive(false);
+        SceneManager.LoadScene("Level_1");
     }
 
     public void QuitGame()

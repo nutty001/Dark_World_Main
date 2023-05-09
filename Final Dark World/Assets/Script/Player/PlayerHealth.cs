@@ -15,9 +15,9 @@ public class PlayerHealth : MonoBehaviour
     public float currentHealth {get; private set; }
      private Animator anim;
     [SerializeField] private GameObject AttackArea;
-   // [SerializeField] private AudioSource GateSound;
- //   [SerializeField] private AudioSource Checkpoints;
-//    [SerializeField] private AudioSource EvilSound;
+    [SerializeField] private AudioSource GateSound;
+    [SerializeField] private AudioSource Checkpoints;
+    [SerializeField] private AudioSource EvilSound;
     
     private void Awake()
     {
@@ -45,7 +45,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startinghealth);
          if(currentHealth > 0)
          {
-          // anim.SetTrigger("hurt");
+           anim.SetTrigger("hurt");
            GetComponent<PlayerMovement>().enabled = false;
          }
          else if(currentHealth <=0)
@@ -91,55 +91,55 @@ public class PlayerHealth : MonoBehaviour
             TakeDamage(1);
             if(currentHealth > 0)
             {
-                Debug.Log("Respawn");
+            Debug.Log("Respawn");
             respawning = true;
             }
         }
 
         if(other.tag == "Ladders")
         {
-          //  anim.SetTrigger("Climb");
+           anim.SetTrigger("Climb");
         }
 
         if(other.tag == "MonsterCollider")
         {
-           // EvilSound.Play();
+            EvilSound.Play();
         }
         
         if (other.tag == "Checkpoints")
         {
-           // Checkpoints.Play();
+           Checkpoints.Play();
            Debug.Log("Chek");
-            respawnPoint = other.transform.position;
+           respawnPoint = other.transform.position;
         }
 
         if (other.tag == "End1" )
         {   
-            //GateSound.Play();
+            GateSound.Play();
             StartCoroutine(WaitForSceneLoad1());
         }
 
         if (other.tag == "End2")
         {
-           // GateSound.Play();
+            GateSound.Play();
             StartCoroutine(WaitForSceneLoad2());
         }
 
         if (other.tag == "End3")
         {
-           // GateSound.Play();
+            GateSound.Play();
             StartCoroutine(WaitForSceneLoad3());
         }
 
         if (other.tag == "End4")
         {
-         //   GateSound.Play();
+            GateSound.Play();
             StartCoroutine(WaitForSceneLoad4());
         }
         
         if (other.tag == "End5")
         {
-         //   GateSound.Play();
+            GateSound.Play();
             StartCoroutine(WaitForSceneLoad4());
         }
     }
