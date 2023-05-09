@@ -45,6 +45,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startinghealth);
          if(currentHealth > 0)
          {
+            Debug.Log("hurt");
            anim.SetTrigger("hurt");
            GetComponent<PlayerMovement>().enabled = false;
          }

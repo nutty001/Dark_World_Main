@@ -42,7 +42,9 @@ public class PlayerRespwan : MonoBehaviour
     public void playerDefeated()
     {
         GetComponent<PlayerMovement>().enabled = false;
+        Debug.Log("hurt");
         anim.SetTrigger("hurt");
+        Debug.Log("die");
         anim.SetTrigger("die");
         PlayerDeath.Play();
         StartCoroutine(WaitForSceneLoad());

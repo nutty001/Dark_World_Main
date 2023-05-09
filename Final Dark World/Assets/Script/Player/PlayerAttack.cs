@@ -13,7 +13,7 @@ public class PlayerAttack : MonoBehaviour
     // bool boo;
     void Start()
     {
-        attackArea = transform.GetChild(0).gameObject;
+        attackArea = transform.GetChild(2).gameObject;
         anim = GetComponent<Animator>();
     }
 
