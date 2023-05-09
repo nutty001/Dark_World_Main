@@ -16,6 +16,7 @@ TagManager:
   - End5
   - End6
   - Coin
+  - sister
   layers:
   - Default
   - TransparentFX

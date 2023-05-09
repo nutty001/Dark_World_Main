@@ -84,6 +84,17 @@ public class PlayerHealth : MonoBehaviour
         SceneManager.LoadScene("level_6"); 
      }
 
+     private IEnumerator WaitforSceneLoad6()
+     {
+        yield return new WaitForSeconds(x);
+        SceneManager.LoadScene("Final_level");
+     }
+     private IEnumerator WaitforSceneLoad7()
+     {
+        yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene("Complete_Game");
+     }
+
     private void OnTriggerEnter2D(Collider2D other)
     {   
         if(other.tag == "Enemy" && AttackArea.activeInHierarchy == false)
@@ -140,7 +151,19 @@ public class PlayerHealth : MonoBehaviour
         if (other.tag == "End5")
         {
             GateSound.Play();
-            StartCoroutine(WaitForSceneLoad4());
+            StartCoroutine(WaitForSceneLoad5());
+        }
+        
+        if (other.tag == "End6")
+        {
+            GateSound.Play();
+            StartCoroutine(WaitforSceneLoad6());
+        }
+        
+        if (other.tag == "sister")
+        {
+            GateSound.Play();
+            StartCoroutine(WaitforSceneLoad7());
         }
     }
 }

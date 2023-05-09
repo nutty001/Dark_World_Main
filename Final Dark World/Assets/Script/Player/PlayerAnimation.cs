@@ -50,7 +50,7 @@ public class PlayerAnimation : MonoBehaviour
             Debug.Log("idle");
         }
 
-        if(rb.velocity.y > 0.1f)
+        if(rb.velocity.y > 1f)
         {  
             Debug.Log(rb.velocity.y);
             state = MovementState.jumping;
